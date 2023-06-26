@@ -24,6 +24,9 @@
   .headerList {
     display: none;
   }
+  .social-icon-block{
+    display: none;
+  }
 }
 @media all and (max-width: 550px) {
   .logo {
