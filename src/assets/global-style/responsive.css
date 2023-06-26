@@ -9,9 +9,13 @@
     padding: 0px;
   }
   .headerLogo {
-    width: 45%;
+    width: 50%;
+  }
+  .headerContainer {
+    width: 90%;
   }
 }
+
 @media all and (min-width: 964px) {
   .burgerIconBlock {
     display: none;
@@ -40,5 +44,36 @@
   }
   .sticky-header {
     display: none;
+  }
+}
+@media all and (max-width: 767px) {
+  .social-icon-block {
+    display: none;
+  }
+  .headerLogo {
+    width: 100%;
+    margin-bottom: 8px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
+  }
+  .navBlock {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.4);
+  }
+  .headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .site-header {
+    height: 160px;
+    background-color: #333;
+  }
+  .burgerIconBlock {
+    margin-top: 8px;
+  }
+  .burgerIconBlock img {
+    width: 25px;
   }
 }

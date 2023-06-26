@@ -32,7 +32,7 @@ const Header = () => {
   };
 
   const sticky = useStickyHeader(105);
-  const header = `header site-header  ${sticky ? "sticky-header " : ""}  `;
+  const header = `site-header  ${sticky && "sticky-header "}  `;
   const stickyDash = sticky ? "stickyDash" : "dash";
   const stickyHeaderListItem = sticky
     ? "stickyHeaderListItem"
@@ -61,13 +61,7 @@ const Header = () => {
     setValue(arr);
   };
   return (
-    <div
-      className={header}
-      ref={ref}
-      style={{
-        height: sticky ? "30px" : "105px",
-      }}
-    >
+    <div className={header} ref={ref}>
       <div className="siteheader-container">
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} getValue={getValue} />
         <div className="container headerContainer">
