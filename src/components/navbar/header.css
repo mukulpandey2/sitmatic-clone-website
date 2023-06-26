@@ -1,24 +1,39 @@
 .headerContainer {
-  background-color: #00000080;
-  width: 100%;
+  /* width: 100%; */
+  margin: auto;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }
 .headerLogo {
-  width: 25%;
+  /* width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  padding: 25px; */
+  min-height: 105px;
+  flex-basis: auto;
+  flex: 1;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
+.navBlock {
+  flex: 1;
+  flex-basis: auto;
+  min-height: 105px;
+}
+
 .headerList {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   list-style: none;
   text-transform: uppercase;
-  width: 60%;
+  /* width: 60%; */
   color: #fff;
   position: relative;
 }
@@ -31,7 +46,7 @@
   cursor: pointer;
   padding: 0px 8px;
 }
-.listItem{
+.listItem {
   text-decoration: none;
   color: #fff;
 }
@@ -60,7 +75,6 @@
 }
 .burgerIconBlock {
   width: 20%;
-
 }
 
 .burgerIcon {
@@ -70,4 +84,50 @@
   background-color: #fff;
   opacity: 0.8;
   margin: 4px 0;
+}
+
+.site-header {
+  height: 105px;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.siteheader-container {
+  width: 100%;
+  position: relative;
+}
+
+.social-icon-block {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.nav-item-block {
+  height: 46px;
+}
+
+.social-icon-item {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 3px;
+  text-align: center;
+  transition: all 0.2s ease-out;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  float: right;
+  background-color: #111;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon-item:hover {
+  background-color: #afafaf;
 }
