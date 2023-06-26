@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./menu.css";
 import SubMenu from "./SubMenu";
 
-const Menu = ({ items }) => {
+const Menu = ({ items, sticky }) => {
   const [dropdown, setDropdown] = useState([]);
   const onMouseEnter = (id) => {
     setDropdown((prev) => {
@@ -19,8 +19,16 @@ const Menu = ({ items }) => {
       return arr;
     });
   };
+
   return (
-    <ul className="menuContainer ">
+    <ul
+      className="menuContainer "
+      style={{
+        top: sticky ? "30px" : "45px",
+        left: sticky && "0px",
+        backgroundColor: sticky ? "#000" : "#fff",
+      }}
+    >
       {items?.map((list, i) => {
         return (
           <div
@@ -30,14 +38,20 @@ const Menu = ({ items }) => {
             onMouseLeave={() => onMouseLeave(i)}
           >
             <li className="subMenuItem" style={{ position: "relative" }}>
-              <a className="menuListItem" href={list.link}>
+              <a
+                className="menuListItem"
+                href={list.link}
+                style={{ color: sticky && "#fff" }}
+              >
                 {list.title}
               </a>
-              {dropdown[i] && <SubMenu submenus={list.submenu} />}
+              {dropdown[i] && (
+                <SubMenu submenus={list.submenu} sticky={sticky} />
+              )}
             </li>
             {list.submenu ? <div className="subMenudash"></div> : <span />}
 
-            <span className="subMenuIndicator"></span>
+            {!sticky && <span className="subMenuIndicator"></span>}
           </div>
         );
       })}

@@ -30,3 +30,12 @@
     width: 150px;
   }
 }
+
+@media all and (max-width: 964px) {
+  .navBlock {
+    flex: none;
+  }
+  .sticky-header {
+    display: none;
+  }
+}

@@ -1,27 +1,24 @@
 import { useEffect, useState } from "react";
 import Menu from "./Menu";
-const SubMenu = ({ submenus }) => {
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    function handleResize() {
-      setViewportWidth(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  console.log(viewportWidth, "viewportWidth");
+const SubMenu = ({ submenus, sticky }) => {
   return (
-    <ul className="subMenuContainer">
+    <ul
+      className="subMenuContainer"
+      style={{
+        // top: sticky ? "30px" : "45px",
+        // left: sticky && "0px",
+        backgroundColor: sticky ? "#000" : "#fff",
+      }}
+    >
       {submenus?.map((list, i) => {
         return (
           <div className="subMenuItemBlock" key={i}>
             <li className="subMenuItem">
-              <a className="menuListItem" href={list.link}>
+              <a
+                className="menuListItem"
+                href={list.link}
+                style={{ color: sticky && "#fff" }}
+              >
                 {list.title}
               </a>
             </li>
