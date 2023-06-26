@@ -1,0 +1,73 @@
+.headerContainer {
+  background-color: #00000080;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.headerLogo {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.headerList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-transform: uppercase;
+  width: 60%;
+  color: #fff;
+  position: relative;
+}
+.headerListItem {
+  list-style: none;
+  margin: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+  padding: 0px 8px;
+}
+.listItem{
+  text-decoration: none;
+  color: #fff;
+}
+.active {
+  background-color: #cd2121;
+  color: #fff;
+  border-radius: 2px;
+  padding: 6px 8px;
+  transition: 0.3s ease-in-out;
+}
+.headerListItem:hover {
+  background-color: #cd2121;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 2px;
+  transition: 0.2s ease-in-out;
+}
+.dash {
+  position: absolute;
+  height: 1px;
+  width: 7px;
+  background-color: hsla(0, 0%, 100%, 0.4);
+  bottom: calc(50% - 12px);
+  left: 20px;
+  opacity: 1;
+}
+.burgerIconBlock {
+  width: 20%;
+
+}
+
+.burgerIcon {
+  width: 25px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: 0.8;
+  margin: 4px 0;
+}

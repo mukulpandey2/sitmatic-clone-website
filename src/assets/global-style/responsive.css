@@ -1,0 +1,32 @@
+@media all and (max-width: 1200px) {
+  .headerLogo {
+    width: 30%;
+  }
+}
+
+@media all and (max-width: 1064px) {
+  .headerListItem {
+    padding: 0px;
+  }
+  .headerLogo {
+    width: 45%;
+  }
+}
+@media all and (min-width: 964px) {
+  .burgerIconBlock {
+    display: none;
+  }
+  .sidebarWrapper {
+    display: none;
+  }
+}
+@media all and (max-width: 964px) {
+  .headerList {
+    display: none;
+  }
+}
+@media all and (max-width: 550px) {
+  .logo {
+    width: 150px;
+  }
+}

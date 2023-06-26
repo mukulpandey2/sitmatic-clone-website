@@ -1,0 +1,63 @@
+.subMenuContainer {
+  position: absolute;
+  width: 15rem;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  left: 14rem;
+  top: -12px;
+}
+
+.menuContainer {
+  position: absolute;
+  width: 15rem;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  left: 10px;
+  top: 45px;
+}
+.subMenuItem {
+  list-style: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #807e7e;
+}
+
+.subMenudash {
+  height: 1.5px;
+  width: 12px;
+  background-color: hsla(0, 0%, 55%, 0.4);
+  opacity: 1;
+}
+.subMenuItemBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #b1b0b057;
+  border-radius: 4px;
+}
+.subMenuItemBlock:hover {
+  background-color: #807e7e18;
+  border-radius: 0;
+}
+.subMenuIndicator {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -3px;
+  left: 12px;
+}
+.nestedMenuBlock {
+  position: absolute;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  left: 186px;
+  top: 0;
+}
+.menuListItem {
+  text-decoration: none;
+  color: #807e7e;
+}
