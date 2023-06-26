@@ -1,0 +1,11 @@
+.footerContainer {
+  background-color: #2f2f2f;
+  padding: 60px 0 20px;
+  border-top: 4px solid #fff;
+  color: #d5d5d5;
+}
+.footerContent {
+  margin-right: auto;
+  margin-left: auto;
+
+}
