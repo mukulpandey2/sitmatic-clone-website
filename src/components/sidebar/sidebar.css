@@ -1,6 +1,5 @@
 .sidebarWrapper {
   height: 100%;
-  max-width: 25rem;
   background-color: #fff;
   position: fixed;
   right: 0;
@@ -8,6 +7,12 @@
   transition: 0.5s;
   z-index: 1;
   top: 0;
+}
+.activeSidebar {
+  width: 25rem;
+}
+.inActiveSidebar {
+  width: 0;
 }
 
 .sidebarBackBtn {
@@ -36,7 +41,7 @@
 }
 .sideListContent {
   list-style: none;
-  padding: 16px 30px;
+  padding: 14px 30px;
   text-transform: uppercase;
   font-size: 16px;
   border-bottom: 1px solid #72727280;

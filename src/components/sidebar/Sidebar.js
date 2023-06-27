@@ -25,8 +25,9 @@ const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
   const renderSubMenu = () => {
     return (
       <div
-        className="sidebarWrapper"
-        style={{ width: activeSubMenu ? "25rem" : "0" }}
+        className={`sidebarWrapper ${
+          activeSubMenu ? "activeSidebar" : "inActiveSidebar"
+        }`}
       >
         <div
           className="sidebarBackBtn"
@@ -79,8 +80,9 @@ const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
   const renderMenu = () => {
     return (
       <div
-        className="sidebarWrapper"
-        style={{ width: activeSidebarMenu ? "25rem" : "0" }}
+        className={`sidebarWrapper ${
+          activeSidebarMenu ? "activeSidebar" : "inActiveSidebar"
+        }`}
       >
         <div
           className="sidebarBackBtn"
@@ -132,7 +134,11 @@ const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
   };
 
   return (
-    <div className="sidebarWrapper" style={{ width: isOpen ? "25rem" : "0" }}>
+    <div
+      className={`sidebarWrapper ${
+        isOpen ? "activeSidebar" : "inActiveSidebar"
+      }`}
+    >
       <div
         className="sidebarBackBtn"
         onClick={() => {

@@ -37,6 +37,7 @@ const Header = () => {
   const stickyHeaderListItem = sticky
     ? "stickyHeaderListItem"
     : "headerListItem";
+  const stickyHeaderMenu = sticky ? "stickyHeaderMenu" : "listItem";
   const onMouseEnter = (id) => {
     setDropdown((prev) => {
       let arr = [...prev];
@@ -104,7 +105,7 @@ const Header = () => {
                     >
                       <li className={stickyHeaderListItem}>
                         <a
-                          className="listItem"
+                          className={stickyHeaderMenu}
                           href={menu.link}
                           style={{ margin: sticky && "8px" }}
                         >
