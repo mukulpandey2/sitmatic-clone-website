@@ -1,0 +1,29 @@
+.topBtn {
+  position: fixed;
+  bottom: 10%;
+  right: 15px;
+  background-color: #404040;
+  height: 50px;
+  width: 50px;
+  font-size: 9px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideRightToLeft .5s;
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
