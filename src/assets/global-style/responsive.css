@@ -73,4 +73,15 @@
   .burgerIconBlock img {
     width: 25px;
   }
+  .footerContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .site-footer-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer-socialIconBlock {
+    padding-bottom: 30px;
+  }
 }
