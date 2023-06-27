@@ -46,6 +46,11 @@
   cursor: pointer;
   padding: 0px 8px;
 }
+
+.headerListItem a {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 .stickyHeaderListItem {
   list-style: none;
   font-weight: 500;

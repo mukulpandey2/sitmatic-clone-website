@@ -32,11 +32,11 @@
     display: none;
   }
 }
-@media all and (max-width: 550px) {
+/* @media all and (max-width: 550px) {
   .logo {
     width: 150px;
   }
-}
+} */
 
 @media all and (max-width: 964px) {
   .navBlock {
@@ -53,13 +53,13 @@
   .headerLogo {
     width: 100%;
     margin-bottom: 8px;
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
+    /* border-bottom: 1px solid hsla(0, 0%, 100%, 0.4); */
   }
   .navBlock {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-top: 1px solid hsla(0, 0%, 100%, 0.4);
+    /* border-top: 1px solid hsla(0, 0%, 100%, 0.4); */
   }
   .headerContainer {
     display: flex;

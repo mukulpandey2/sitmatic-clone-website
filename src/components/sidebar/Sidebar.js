@@ -4,34 +4,34 @@ import ChevronLeftIcon from "../../assets/image/chevron-left (1).png";
 import { menuItems } from "../../Data";
 
 const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
-  const [menuValue, setmenuValue] = useState();
-  const [subMenuValue, setSubmenuValue] = useState();
+  const [menuValue, setMenuValue] = useState();
+  const [subMenuValue, setSubMenuValue] = useState();
   const [activeSidebarMenu, setActiveSidebarMenu] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState(false);
+  const [activeSubMenu, setActiveSubMenu] = useState(false);
   const getMenu = (data) => {
     let arr = [];
     data.map((list, i) => {
       arr.push(list);
     });
-    setmenuValue(arr);
+    setMenuValue(arr);
   };
   const getSubMenu = (data) => {
     let arr = [];
     data.map((list, i) => {
       arr.push(list);
     });
-    setSubmenuValue(arr);
+    setSubMenuValue(arr);
   };
-  const reanderSubmenu = () => {
+  const renderSubMenu = () => {
     return (
       <div
         className="sidebarWrapper"
-        style={{ width: activeSubmenu ? "25rem" : "0" }}
+        style={{ width: activeSubMenu ? "25rem" : "0" }}
       >
         <div
           className="sidebarBackBtn"
           onClick={() => {
-            setActiveSubmenu(false);
+            setActiveSubMenu(false);
           }}
         >
           <div className="sidebarBackBtnIcon">
@@ -41,7 +41,7 @@ const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
             <h4 className="sidebarBackh4">Back</h4>
           </div>
         </div>
-        <div style={{ widh: "100%" }}>
+        <div style={{ width: "100%" }}>
           {subMenuValue?.map((list, i) => {
             return (
               <div className="sideListContentBlock" key={i}>
@@ -60,7 +60,7 @@ const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
                       width={25}
                       style={{ transform: "rotate(180deg)" }}
                       onClick={() => {
-                        setActiveSubmenu(true);
+                        setActiveSubMenu(true);
                         getSubMenu(list.submenu);
                       }}
                     />
@@ -76,7 +76,7 @@ const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
     );
   };
 
-  const reanderMenu = () => {
+  const renderMenu = () => {
     return (
       <div
         className="sidebarWrapper"
@@ -115,7 +115,7 @@ const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
                       width={25}
                       style={{ transform: "rotate(180deg)" }}
                       onClick={() => {
-                        setActiveSubmenu(true);
+                        setActiveSubMenu(true);
                         getSubMenu(list.submenu);
                       }}
                     />
@@ -178,8 +178,8 @@ const Sidebar = ({ isOpen, setIsOpen, getValue }) => {
           );
         })}
       </div>
-      {reanderMenu()}
-      {reanderSubmenu()}
+      {renderMenu()}
+      {renderSubMenu()}
     </div>
   );
 };
